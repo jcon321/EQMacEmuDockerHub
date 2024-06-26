@@ -25,7 +25,7 @@ The purpose of this image is to quickly stand up a TAKP server. This is not a de
   docker run -d --name my-eqmacemu -v eqmacemu-data:/var/lib/mysql -p 6000:6000/udp -p 5998:5998 -p 9000:9000/udp -p 9000:9000 -p 7778:7778/udp -p 7375-7400:7375-7400/udp -p 7375-7400:7375-7400 -p 7000-7374:7000-7374/udp -p 7000-7374:7000-7374 -p 3306:3306 eqmacemu/eqmacemu:latest
   ```
 
-3. Ensure your EQ Client's eqhosts.txt file points to your local server. Get the client from https://wiki.takp.info/index.php/Getting_Started if you do not already have it.
+3. Ensure your EQ Client's `eqhosts.txt` file points to your local server. Get the client from https://wiki.takp.info/index.php/Getting_Started if you do not already have it.
 
 ```
 [Registration Servers]
