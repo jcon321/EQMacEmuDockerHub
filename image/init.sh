@@ -11,8 +11,8 @@ service mariadb start
 echo "Drop and create database"
 mariadb -e "DROP DATABASE IF EXISTS peq; \
 	CREATE DATABASE peq; \
-	CREATE USER IF NOT EXISTS 'peq'@'127.0.0.1' identified by 'peqpass'; \
-	GRANT ALL PRIVILEGES on *.* to 'peq'@'127.0.0.1';"
+	CREATE USER IF NOT EXISTS 'peq'@'%' identified by 'peqpass'; \
+	GRANT ALL PRIVILEGES on *.* to 'peq'@'%';"
 echo "Sourcing alkabor..."
 for f in alkabor_*.sql; do mariadb --database=peq -e "source $f"; done
 echo "Sourcing data_tables..."
