@@ -6,7 +6,7 @@ This docker image represents a fully configured and ready to play EQMac Emu Serv
   * https://www.takproject.net/
 
 
-The purpose of this image is to quickly stand up a TAKP server. This is not a development environment, if you're interested in modifying the source then visit https://github.com/EQMacEmu/Server/tree/main/.devcontainer for information on a dockerized development environment. This is not recommended, nor configured properly, for production/public use.
+The purpose of this image is to quickly stand up a TAKP server. This is not a development environment, if you're interested in modifying the server's source then visit https://github.com/EQMacEmu/Server/tree/main/.devcontainer for information on a dockerized development environment. This is not recommended nor configured properly for production/public use, though advanced users may extend this image and harden it for public use.
 
 &nbsp;
 &nbsp;
@@ -54,13 +54,15 @@ The purpose of this image is to quickly stand up a TAKP server. This is not a de
 docker exec -it my-eqmacemu mysql -e "UPDATE account SET status=255 WHERE name = 'XXX'" peq
 ```
 
-- Don't lose your database! The database is mounted to a docker volume. You can use "Docker Desktop" Volume tab to see it (it is named eqmacemu-data). If you remove/delete this volume your database will be destroyed.
+- Don't lose your database! The database is mounted to a docker volume. You can use "Docker Desktop" Volume tab to see it (it is named eqmacemu-data). If you remove/delete this volume your database will be dropped.
 
 - If you wish to stop the server you can just completely exit "Docker Desktop", or visit the "Containers" tab and select the "Stop" button next to my-eqmacemu.
 
 - If you wish to resume the server after exiting "Docker Desktop", or by stopping the container, you can visit the "Containers" tab in "Docker Desktop" and select the "Play" button.
 
-- If you wish to start fresh, you can remove the container under the "Containers" tab, the image under the "Images" tab, and the database under the "Volumes" tab and start at Step 1.
+- If you wish to start fresh (or remove everything that was installed), you can remove the container under the "Containers" tab, the image under the "Images" tab, and the database under the "Volumes" tab and start at Step 1.
+
+- You may connect directly to the database from your host via command line `mysql -h127.0.0.1 -u peq -p peqpass` or any graphical database tool.
 
 &nbsp;
 &nbsp;
