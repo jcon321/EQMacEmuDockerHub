@@ -4,7 +4,7 @@
 echo "Initializing Database"
 cd data/alkabor*
 
-# expose mysql to all IPs (so host can directly talk to db)
+# expose mysql to all IPs (so host can directly talk to db) todo could deny all except docker subnet
 sed -i 's/127\.0\.0\.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 
 service mariadb start 
