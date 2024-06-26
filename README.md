@@ -8,6 +8,8 @@ This docker image represents a fully configured and ready to play EQMac Emu Serv
 
 The purpose of this image is to quickly stand up a TAKP server. This is not a development environment, if you're interested in modifying the server's source then visit https://github.com/EQMacEmu/Server/tree/main/.devcontainer for information on a dockerized development environment. This is not recommended nor configured properly for production/public use, though advanced users may extend this image and harden it for public use.
 
+![pic](./eqmacemudockerhub.png)
+
 &nbsp;
 &nbsp;
 
