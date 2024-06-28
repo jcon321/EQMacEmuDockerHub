@@ -9,4 +9,4 @@ docker run -d \
   -p 7000-7374:7000-7374/udp \
   -p 7000-7374:7000-7374 \
   -p 3306:3306 \
-  eqmacemu:latest
+  eqmacemu/eqmacemu
