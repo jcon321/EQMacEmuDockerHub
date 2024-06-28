@@ -41,5 +41,5 @@ cp -Rup /src/utils/patches/*.conf src/build/bin
 echo "Copying env files"
 cp -Rup /src/.devcontainer/base/eqemu_config.json src/build/bin
 sed -i 's#/src/.devcontainer/bin/zone#/src/build/bin/zone#g' /src/build/bin/eqemu_config.json
-cp -Rup /src/.devcontainer/base/login.ini src/build/bin
+cp -Rup /src/.devcontainer/base/login.json src/build/bin
 
