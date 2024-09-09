@@ -79,7 +79,7 @@ docker run -d --name my-takpphpeditor -p 80:80 eqmacemu/takpphpeditor
 ```
 - View the editor at `http://localhost` use admin/password for default credentials.
 
-
+![pic](./eqmacemuphpeditor.png)
 &nbsp;
 &nbsp;
 &nbsp;
