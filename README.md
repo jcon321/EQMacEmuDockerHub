@@ -69,3 +69,18 @@ docker exec -it my-eqmacemu mysql -e "UPDATE account SET status=255 WHERE name =
 &nbsp;
 &nbsp;
 
+---
+
+## TAKP Php Editor
+
+- The PEQ web based database editor is optionally available in another container.
+```
+docker run -d --name my-takpphpeditor -p 80:80 eqmacemu/takpphpeditor
+```
+- View the editor at `http://localhost` use admin/password for default credentials.
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
