@@ -1,4 +1,5 @@
 docker run -d \
+  --name my-eqmacemu \
   -p 6000:6000/udp \
   -p 5998:5998 \
   -p 9000:9000/udp \
