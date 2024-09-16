@@ -12,12 +12,12 @@ cd /src/build/bin
 sleep 3
 
 # Start background processes
-./loginserver &> login.log &
-./world &> world.log &
-./eqlaunch 'dynzone1' &> eqlaunch.log &
-./eqlaunch 'boats' &> eqlaunch-boats.log &
-./queryserv &> queryserv.log &
-./ucs &> ucs.log &
+./loginserver > /dev/stdout 2> /dev/stderr &
+./world > /dev/stdout 2> /dev/stderr &
+./eqlaunch 'dynzone1' > /dev/stdout 2> /dev/stderr &
+./eqlaunch 'boats' > /dev/stdout 2> /dev/stderr &
+./queryserv > /dev/stdout 2> /dev/stderr &
+./ucs > /dev/stdout 2> /dev/stderr &
 
 echo "Server is ready..."
 
