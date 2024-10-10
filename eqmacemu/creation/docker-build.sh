@@ -1,1 +1,1 @@
-docker build -t eqmacemu/eqmacemu ../
+docker build --progress=plain -t eqmacemu/eqmacemu ../

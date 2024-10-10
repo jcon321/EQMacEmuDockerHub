@@ -1,5 +1,4 @@
-docker run -d \
-  --name my-eqmacemu \
+docker run --name my-eqmacemu \
   -p 6000:6000/udp \
   -p 5998:5998 \
   -p 9000:9000/udp \
@@ -11,3 +10,5 @@ docker run -d \
   -p 7000-7374:7000-7374 \
   -p 3306:3306 \
   eqmacemu/eqmacemu
+
+# -d
