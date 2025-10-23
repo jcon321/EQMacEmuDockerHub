@@ -22,8 +22,6 @@ echo "Sourcing login_tables..."
 for f in login_tables_*.sql; do mariadb --database=peq -e "source $f"; done
 echo "Sourcing player_tables..."
 for f in player_tables_*.sql; do mariadb --database=peq -e "source $f"; done
-echo "Sourcing loginserver..."
-cd /src/loginserver/login_util && mariadb --database peq -e "source tblloginserversettings.sql"
 
 echo "Sourcing local development scripts"
 cd /src/.devcontainer/base/db/local && for f in *.sql; do mariadb --database=peq -e "source $f"; done
