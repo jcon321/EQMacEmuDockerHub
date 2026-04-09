@@ -31,6 +31,11 @@ RUN mkdir data && \
     unzip alkabor_latest.zip && \
     rm -f alkabor_latest.zip
 
+# Source some required files that arent in the main dump, one day they may be and this will break
+RUN mv /src/utils/sql/git/required/2025_05_26_Add_Detail_Player_Event_Logging.sql /src/.devcontainer/base/db/local/
+RUN mv /src/utils/sql/git/required/2025_07_05_player_event_logs_table.sql /src/.devcontainer/base/db/local/
+
+
 COPY init.sh .
 RUN ./init.sh
 
