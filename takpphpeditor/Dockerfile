@@ -1,5 +1,5 @@
 # Use the official PHP image as a base image
-FROM php:8.0-apache
+FROM php:8.4-apache
 
 ENV DB_HOST=host.docker.internal
 ENV DB_USER=peq
